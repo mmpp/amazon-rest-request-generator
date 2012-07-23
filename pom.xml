@@ -5,8 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.mmpp.amazon</groupId>
   <version>1.0.0</version>
-  <artifactId>request-parser</artifactId>
-  <name>Amazon Web Service Request Parser</name>
+  <artifactId>request-generator</artifactId>
+  <name>Amazon Web Service Request Generator</name>
 	<build>
     	<plugins>
 			<plugin>
