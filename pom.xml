@@ -91,6 +91,11 @@
       <id>Maven Snapshots</id>
       <url>http://snapshots.maven.codehaus.org/maven2/</url>
     </repository>
+    <repository>
+      <id>mmpp.org</id>
+      <name>mmpp Repository</name>
+      <url>http://www.mmpp.org/repos/</url>
+    </repository>
   </repositories>
     <pluginRepositories>
     <pluginRepository>
