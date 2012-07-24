@@ -1,7 +1,10 @@
 package org.mmpp.amazon.ecs.request.generator;
 import static org.junit.Assert.*;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 import org.junit.Test;
 
@@ -25,7 +28,7 @@ public class URLGeneratorTest {
 		String key = "SECRETKEY";
 		String trackingid = "TRACKINGID";
 		String itemId = "9784091831941";
-		java.util.Date timestamp = (new java.text.SimpleDateFormat("yyyy/MM/dd hh:mm:ss")).parse("2012/07/22 15:33:00");
+		java.util.Date timestamp = getDateFormat("yyyy/MM/dd HH:mm:ss").parse("2012/07/22 15:33:00");
 		Request request = new Request();
 		
 		ItemLookupRequest itemLookupRequest = new ItemLookupRequest();
@@ -45,7 +48,7 @@ public class URLGeneratorTest {
 		request.setItemRequest(itemLookupRequest);
 		String url = new URLGenerator().parse(request);
 		
-		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&IdType=ISBN&ItemId=9784091831941&Operation=ItemLookup&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T06%3A33%3A00Z&Signature=7wNUWMLi%2FR9D3zA5%2B1APKr7ED5FxGAQh5seufAJpa28%3D",url);
+		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&IdType=ISBN&ItemId=9784091831941&Operation=ItemLookup&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T15%3A33%3A00Z&Signature=NIYH10zgeT3waN3Lud8Xtc1LaCoCvrnb03cDbI8AHcM%3D",url);
 		
 	}
 
@@ -55,7 +58,7 @@ public class URLGeneratorTest {
 		String key = "SECRETKEY";
 		String trackingid = "TRACKINGID";
 		String itemId = "B005030N36";
-		java.util.Date timestamp = (new java.text.SimpleDateFormat("yyyy/MM/dd hh:mm:ss")).parse("2012/07/22 15:33:00");
+		java.util.Date timestamp = getDateFormat("yyyy/MM/dd HH:mm:ss").parse("2012/07/22 15:33:00");
 		Request request = new Request();
 		
 		ItemLookupRequest itemLookupRequest = new ItemLookupRequest();
@@ -74,7 +77,7 @@ public class URLGeneratorTest {
 		request.setItemRequest(itemLookupRequest);
 		String url = new URLGenerator().parse(request);
 		
-		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&IdType=ASIN&ItemId=B005030N36&Operation=ItemLookup&Service=AWSECommerceService&Timestamp=2012-07-22T06%3A33%3A00Z&Signature=lb2EztH9IRPFRI%2BX2fATRw%2F1yQ4OlZ3X7Mp0Fc9Wbts%3D",url);
+		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&IdType=ASIN&ItemId=B005030N36&Operation=ItemLookup&Service=AWSECommerceService&Timestamp=2012-07-22T15%3A33%3A00Z&Signature=O7WODQEvp3LXxmXqw6xPqXedGU24LLiZxqz4Rll%2BE2g%3D",url);
 		
 	}
 	@Test
@@ -82,7 +85,7 @@ public class URLGeneratorTest {
 		String accessKey = "ACCESSKEY";
 		String key = "SECRETKEY";
 		String trackingid = "TRACKINGID";
-		java.util.Date timestamp = (new java.text.SimpleDateFormat("yyyy/MM/dd hh:mm:ss")).parse("2012/07/22 15:33:00");
+		java.util.Date timestamp = getDateFormat("yyyy/MM/dd HH:mm:ss").parse("2012/07/22 15:33:00");
 
 		String author = "神塚 ときお";
 		
@@ -104,7 +107,7 @@ public class URLGeneratorTest {
 		request.setItemRequest(itemSearchRequest);
 		String url = new URLGenerator().parse(request);
 		
-		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&Author=%E7%A5%9E%E5%A1%9A%20%E3%81%A8%E3%81%8D%E3%81%8A&Operation=ItemSearch&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T06%3A33%3A00Z&Signature=%2FC4TyntyHkdt4v901lSCRJOtmfsVbTclNLMvSP5tSTw%3D",url);
+		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&Author=%E7%A5%9E%E5%A1%9A%20%E3%81%A8%E3%81%8D%E3%81%8A&Operation=ItemSearch&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T15%3A33%3A00Z&Signature=4riYzUw1KDIOI%2BkE6OPrchJQNmfSMT%2B8xRakAbCqgiA%3D",url);
 		
 	}
 	@Test
@@ -112,7 +115,7 @@ public class URLGeneratorTest {
 		String accessKey = "ACCESSKEY";
 		String key = "SECRETKEY";
 		String trackingid = "TRACKINGID";
-		java.util.Date timestamp = (new java.text.SimpleDateFormat("yyyy/MM/dd hh:mm:ss")).parse("2012/07/22 15:33:00");
+		java.util.Date timestamp = getDateFormat("yyyy/MM/dd HH:mm:ss").parse("2012/07/22 15:33:00");
 
 		String author = "神塚 ときお";
 		
@@ -135,7 +138,7 @@ public class URLGeneratorTest {
 		request.setItemRequest(itemSearchRequest);
 		String url = new URLGenerator().parse(request);
 		
-		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&Author=%E7%A5%9E%E5%A1%9A%20%E3%81%A8%E3%81%8D%E3%81%8A&ItemPage=2&Operation=ItemSearch&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T06%3A33%3A00Z&Signature=fsvTNwQTZq0G%2FA7oFt%2FcrQ53OZqrdZyJjASI7HqrtBI%3D",url);
+		assertEquals("http://ecs.amazonaws.jp/onca/xml?AWSAccessKeyId=ACCESSKEY&AssociateTag=TRACKINGID&Author=%E7%A5%9E%E5%A1%9A%20%E3%81%A8%E3%81%8D%E3%81%8A&ItemPage=2&Operation=ItemSearch&SearchIndex=Books&Service=AWSECommerceService&Timestamp=2012-07-22T15%3A33%3A00Z&Signature=TFTJndItNMCkL9B9%2Fz6WkDfxOTDa2ZBiWl0VClLqWIE%3D",url);
 		
 	}
 	@Test
@@ -267,7 +270,7 @@ public class URLGeneratorTest {
 		String accessKey = "ACCESSKEY";
 		String key = "SECRETKEY";
 		String trackingid = "TRACKINGID";
-		java.util.Date timestamp = (new java.text.SimpleDateFormat("yyyy/MM/dd hh:mm:ss")).parse("2012/07/22 15:33:00");
+		java.util.Date timestamp = getDateFormat("yyyy/MM/dd HH:mm:ss").parse("2012/07/22 15:33:00");
 		Request request = new Request();
 		
 		ItemLookupRequest itemLookupRequest = new ItemLookupRequest();
@@ -286,5 +289,17 @@ public class URLGeneratorTest {
 		} catch (RequestParameterException e) {
 			assertEquals("ItemLookupRequest:(IdType,ItemIdを確認してください)",e.getMessage());
 		}
+	}
+	@Test
+	public void testTimestamp() throws ParseException{
+		String datevalue = "2012/07/22 15:33:00";
+		DateFormat dfm = getDateFormat("yyyy/MM/dd HH:mm:ss");
+		java.util.Date timestamp = dfm.parse(datevalue);
+		assertEquals(datevalue,dfm.format(timestamp));
+	}
+	public DateFormat getDateFormat(String format){
+		DateFormat dateFormat = new SimpleDateFormat(format);
+		dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+		return dateFormat;
 	}
 }
