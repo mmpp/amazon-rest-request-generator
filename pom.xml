@@ -3,10 +3,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.mmpp.amazon</groupId>
+  <groupId>org.mmpp.amazon.rest</groupId>
   <version>1.0.0</version>
   <artifactId>request-generator</artifactId>
-  <name>Amazon Web Service Request Generator</name>
+  <name>Amazon Web Service REST Request Generator</name>
 	<build>
     	<plugins>
 			<plugin>
@@ -77,7 +77,7 @@
 			<version>1.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.mmpp.amazon</groupId>
+			<groupId>org.mmpp.amazon.rest</groupId>
 			<artifactId>request-model</artifactId>
 			<version>1.0.0</version>
 		</dependency>

@@ -1,4 +1,4 @@
-package org.mmpp.amazon.ecs.request.generator;
+package org.mmpp.amazon.rest.request.generator;
 import static org.junit.Assert.*;
 
 import java.text.DateFormat;
@@ -8,17 +8,17 @@ import java.util.TimeZone;
 
 import org.junit.Test;
 
-import org.mmpp.amazon.ecs.request.generator.RequestParameterException;
-import org.mmpp.amazon.ecs.request.generator.URLGenerator;
-import org.mmpp.amazon.ecs.request.model.AbstractRequest;
-import org.mmpp.amazon.ecs.request.model.AccessCertificate;
-import org.mmpp.amazon.ecs.request.model.AffiliateAccount;
-import org.mmpp.amazon.ecs.request.model.IdType;
-import org.mmpp.amazon.ecs.request.model.ItemLookupRequest;
-import org.mmpp.amazon.ecs.request.model.ItemSearchRequest;
-import org.mmpp.amazon.ecs.request.model.Request;
-import org.mmpp.amazon.ecs.request.model.SearchIndex;
-import org.mmpp.amazon.ecs.request.model.SearchType;
+import org.mmpp.amazon.rest.request.generator.RequestParameterException;
+import org.mmpp.amazon.rest.request.generator.URLGenerator;
+import org.mmpp.amazon.rest.request.model.AbstractRequest;
+import org.mmpp.amazon.rest.request.model.AccessCertificate;
+import org.mmpp.amazon.rest.request.model.AffiliateAccount;
+import org.mmpp.amazon.rest.request.model.IdType;
+import org.mmpp.amazon.rest.request.model.ItemLookupRequest;
+import org.mmpp.amazon.rest.request.model.ItemSearchRequest;
+import org.mmpp.amazon.rest.request.model.Request;
+import org.mmpp.amazon.rest.request.model.SearchIndex;
+import org.mmpp.amazon.rest.request.model.SearchType;
 
 public class URLGeneratorTest {
 

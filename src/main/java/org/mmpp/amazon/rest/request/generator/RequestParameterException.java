@@ -1,4 +1,4 @@
-package org.mmpp.amazon.ecs.request.generator;
+package org.mmpp.amazon.rest.request.generator;
 
 public class RequestParameterException extends Exception {
 	/**

@@ -1,4 +1,4 @@
-package org.mmpp.amazon.ecs.request.generator;
+package org.mmpp.amazon.rest.request.generator;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
@@ -12,11 +12,11 @@ import java.util.TimeZone;
 import java.util.TreeMap;
 
 import org.apache.commons.codec.binary.Base64;
-import org.mmpp.amazon.ecs.request.model.AbstractRequest;
-import org.mmpp.amazon.ecs.request.model.Request;
-import org.mmpp.amazon.ecs.request.model.ItemLookupRequest;
-import org.mmpp.amazon.ecs.request.model.ItemSearchRequest;
-import org.mmpp.amazon.ecs.request.model.SearchType;
+import org.mmpp.amazon.rest.request.model.AbstractRequest;
+import org.mmpp.amazon.rest.request.model.ItemLookupRequest;
+import org.mmpp.amazon.rest.request.model.ItemSearchRequest;
+import org.mmpp.amazon.rest.request.model.Request;
+import org.mmpp.amazon.rest.request.model.SearchType;
 
 public class URLGenerator {
 	private static final String UTF8_CHARSET = "UTF-8";
